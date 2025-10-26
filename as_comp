@@ -1,0 +1,9 @@
+#!/bin/bash
+
+DEFAULT_RUNS=1
+FILE_NAME=$1
+OBJ_NAME="${FILE_NAME%.s}.o"
+
+as --32 -g $FILE_NAME -o $OBJ_NAME
+ld -melf_i386 $OBJ_NAME
+gdb a.out

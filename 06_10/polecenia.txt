@@ -1,0 +1,2 @@
+as --32 -g cos.s -o cos.o
+ld -melf_i386
