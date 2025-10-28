@@ -12,17 +12,13 @@ __begin:
 LOOP:
     cmp $tab_size, %EBX
     jge END_LOOP    
-    cmp %EAX, tab(, %EBX, 4)
-    jle SKIP
-    lea tab(, %EBX, 4), %EDX
-    mov tab(, %EBX, 4), %EAX
+    mov %EBX, %EAX
+    mul %EAX
+    mov tab(, %EBX, 4) 
 SKIP:
     inc %EBX
     jmp LOOP
 END_LOOP:
-    mov %EDX, %EBX
     nop
 __end:
     nop
-
-// znajduje najwieksza, trzeba index przepisac
