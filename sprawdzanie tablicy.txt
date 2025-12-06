@@ -1,0 +1,4 @@
+x /5wd &tab
+
+string:
+x /s &nap
